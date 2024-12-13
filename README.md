@@ -2,8 +2,7 @@
 
 ## 井字棋
 
-![初始版本](public/showinit.png)
-
+<img src="public/showinit.png" alt="初始版本1" width="400"/>
 - [x] 仅针对当前着手，显示“You are at move #…”而不是按钮。
 
 ```js
@@ -16,8 +15,7 @@ if (move === currentMove) {
 }
 ```
 
-![解决1](public/solution1.png)
-<img src="public/solution1.png" alt="解决1" width="200"/>
+<img src="public/solution1.png" alt="解决1" width="400"/>
 
 - [ ]重写 Board 以使用两个循环来制作方块而不是对它们进行硬编码。
 
