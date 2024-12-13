@@ -2,7 +2,8 @@
 
 ## 井字棋
 
-<img src="public/showinit.png" alt="初始版本1" width="400"/>
+<img src="public/showinit.png" alt="初始版本1" width="300"/>
+
 - [x] 仅针对当前着手，显示“You are at move #…”而不是按钮。
 
 ```js
