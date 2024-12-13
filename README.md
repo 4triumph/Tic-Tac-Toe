@@ -17,6 +17,7 @@ if (move === currentMove) {
 ```
 
 ![解决1](public/solution1.png)
+<img src="public/solution1.png" alt="解决1" width="200"/>
 
 - [ ]重写 Board 以使用两个循环来制作方块而不是对它们进行硬编码。
 
