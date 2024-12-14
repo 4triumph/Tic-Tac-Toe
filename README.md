@@ -18,7 +18,7 @@ if (move === currentMove) {
 }
 ```
 
-<img src="public/solution1.png" alt="解决1" width="400"/>
+<img src="public/solution1.png" alt="解决1" width="350"/>
 
 - [ ] 重写 Board 以使用两个循环来制作方块而不是对它们进行硬编码。
 
@@ -45,7 +45,7 @@ return (
   );
 ```
 
-<img src="public/solution2.png" alt="解决2" width="400"/>
+<img src="public/solution2.png" alt="解决2" width="300"/>
 
 - [ ] 添加一个切换按钮，使可以按升序或降序对落子的步数进行排序。
 - [ ] 当有人获胜时，突出显示致使获胜的三个方块（当没有人获胜时，显示一条关于结果为平局的消息）。
