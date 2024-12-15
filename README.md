@@ -75,6 +75,8 @@ const sortedMoves = isAscending ? moves : moves.slice().reverse();
 <ul>{sortedMoves}</ul>
 ```
 
+<img src="public/solution3.png" alt="解决3" width="300"/>
+
 - [ ] 当有人获胜时，突出显示致使获胜的三个方块（当没有人获胜时，显示一条关于结果为平局的消息）。
 - [ ] 在“落子”的历史列表中以 (row, col) 格式显示每步的位置。
 ````
