@@ -62,9 +62,9 @@ return (
 
 <img src="public/solution2.png" alt="解决2" width="300"/>
 
-- [ ] 添加一个切换按钮，使可以按升序或降序对落子的步数进行排序。
+- [x] 添加一个切换按钮，使可以按升序或降序对落子的步数进行排序。
 
-````js
+```js
 const [isAscending, setIsAscending] = useState(true);
 
 const sortedMoves = isAscending ? moves : moves.slice().reverse();
@@ -79,4 +79,4 @@ const sortedMoves = isAscending ? moves : moves.slice().reverse();
 
 - [ ] 当有人获胜时，突出显示致使获胜的三个方块（当没有人获胜时，显示一条关于结果为平局的消息）。
 - [ ] 在“落子”的历史列表中以 (row, col) 格式显示每步的位置。
-````
+
