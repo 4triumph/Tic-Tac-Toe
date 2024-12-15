@@ -125,3 +125,5 @@ return { winner: null, line: null };
 <img src="public/solution4_2.png" alt="解决4_2" width="300"/>
 
 - [ ] 在“落子”的历史列表中以 (row, col) 格式显示每步的位置。
+
+

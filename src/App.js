@@ -2,7 +2,10 @@ import "./App.css";
 import { useState } from "react";
 function Square({ value, onSquareClick, isHighlight }) {
   return (
-    <button className={`square ${isHighlight ? "highlight" : ""}`} onClick={onSquareClick}>
+    <button
+      className={`square ${isHighlight ? "highlight" : ""}`}
+      onClick={onSquareClick}
+    >
       {value}
     </button>
   );
@@ -16,7 +19,7 @@ function Board({ xIsNext, squares, onPlay, winnerLine }) {
     } else {
       nextSquares[i] = "O";
     }
-    onPlay(nextSquares);
+    onPlay(nextSquares, i);
   }
 
   const { winner, line } = calculateWinner(squares);
@@ -76,30 +79,40 @@ function calculateWinner(squares) {
 }
 
 export default function Game() {
-  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [history, setHistory] = useState([
+    { squares: Array(9).fill(null), lastMove: null },
+  ]);
   const [currentMove, setCurrentMove] = useState(0);
   const [isAscending, setIsAscending] = useState(true);
   const xIsNext = currentMove % 2 === 0;
-  const currentSquares = history[currentMove];
-  function handlePlay(nextSquares) {
-    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+  const currentSquares = history[currentMove].squares;
+  function handlePlay(nextSquares, index) {
+    const nextHistory = [
+      ...history.slice(0, currentMove + 1),
+      { squares: nextSquares, lastMove: index },
+    ];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
   }
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
   }
-  const moves = history.map((squares, move) => {
+  const moves = history.map((step, move) => {
     let description;
+    const { lastMove } = step;
+    const row = lastMove !== null ? Math.floor(lastMove / 3) : null;
+    const col = lastMove !== null ? lastMove % 3 : null;
     if (move > 0) {
-      description = "Go to move #" + move;
+      description = `Go to move #${move} ( ${row}, ${col} )`;
     } else {
       description = "Go to game start";
     }
     if (move === currentMove) {
       return (
         <li key={move}>
-          <span>You are at move #{move}</span>
+          <span>
+            You are at move #{move} ({row}, {col})
+          </span>
         </li>
       );
     }
