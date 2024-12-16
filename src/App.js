@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ProductList from './components/ProductList/ProductList'; // 修改路径
-import TicTacToe from './components/TicTacToe/TicTacToe'; // 修改路径
+import ProductList from './components/ProductList/ProductList';
+import TicTacToe from './components/TicTacToe/TicTacToe';
 import './index.css';
 
 function App() {
