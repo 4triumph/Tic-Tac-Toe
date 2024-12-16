@@ -1,12 +1,16 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import ProductList from "./components/ProductList";
-import TicTacToe from "./components/TicTacToe";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ProductList from './components/ProductList/ProductList'; // 修改路径
+import TicTacToe from './components/TicTacToe/TicTacToe'; // 修改路径
+import './index.css';
 
 function App() {
   return (
     <Router>
       <div style={{ padding: "20px", textAlign: "center" }}>
         <h1>React Demos</h1>
+
+        {/* 导航栏部分 */}
         <nav style={{ marginBottom: "20px" }}>
           <Link to="/productlist" style={{ marginRight: "15px" }}>
             产品列表
@@ -14,7 +18,7 @@ function App() {
           <Link to="/tictactoe">井字棋</Link>
         </nav>
 
-        {/* 路由配置 */}
+        {/* 路由配置部分 */}
         <Routes>
           <Route path="/" element={<h2>点击上方链接进入对应的 Demo</h2>} />
           <Route path="/productlist" element={<ProductList />} />
