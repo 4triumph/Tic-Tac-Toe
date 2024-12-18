@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductList from './components/ProductList/ProductList';
 import TicTacToe from './components/TicTacToe/TicTacToe';
 import './index.css';
-
+import './App.css'
 function App() {
   return (
     <Router>
-      <div style={{ padding: "20px", textAlign: "center" }}>
+      <div className='app-container'>
         <h1>React Demos</h1>
 
         {/* 导航栏部分 */}
-        <nav style={{ marginBottom: "20px" }}>
+        <nav className='nav-links'>
           <Link to="/productlist" style={{ marginRight: "15px" }}>
             产品列表
           </Link>

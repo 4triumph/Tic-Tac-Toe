@@ -1,0 +1,24 @@
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.category-name {
+    text-align: center;
+}
+
+.product-name,
+.product-price {
+    text-align: left;
+}
